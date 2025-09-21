@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AussieTV - Connect Worldwide</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1 class="brand-title">AussieTV</h1>
+                <span class="brand-tagline">Connect Worldwide</span>
+            </div>
+            <div class="nav-menu">
+                <button class="nav-link active" data-page="home">Home</button>
+                <button class="nav-link" data-page="about">About</button>
+                <button class="nav-link" data-page="safety">Safety</button>
+                <button class="nav-link" data-page="contact">Contact</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Homepage -->
+        <div id="home-page" class="page active">
+            <!-- Hero Section with Starry Background -->
+            <section class="hero-section">
+                <div class="stars-bg">
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                    <div class="star"></div>
+                </div>
+                <div class="hero-container">
+                    <h1 class="hero-title">Welcome to AussieTV</h1>
+                    <p class="hero-subtitle">Connect with people worldwide through random video chat</p>
+
+                    <div class="hero-features">
+                        <div class="feature-box">
+                            <div class="feature-icon">⚡</div>
+                            <h3>Instant Connections</h3>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-icon">🔒</div>
+                            <h3>Safe Environment</h3>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-icon">💬</div>
+                            <h3>Text & Video Chat</h3>
+                        </div>
+                        <div class="feature-box">
+                            <div class="feature-icon">📱</div>
+                            <h3>Mobile Friendly</h3>
+                        </div>
+                    </div>
+
+                    <button id="start-chat-hero" class="btn btn-primary">Start Video Chat</button>
+                </div>
+            </section>
+
+            <!-- Bottom CTA Section -->
+            <section class="cta-section">
+                <div class="cta-container">
+                    <button id="start-chat-bottom" class="btn btn-secondary">Start Video Chat</button>
+                </div>
+            </section>
+        </div>
+
+        <!-- Video Chat Page -->
+        <div id="video-chat-page" class="page">
+            <div class="video-chat-layout">
+                <!-- Main Video Area -->
+                <div class="video-main">
+                    <div class="video-screens">
+                        <!-- People Screen (Left) -->
+                        <div class="video-screen">
+                            <div class="video-wrapper">
+                                <div class="stars-bg-small">
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                </div>
+                                <div class="screen-label">People</div>
+                                <div id="stranger-video-area" class="video-area">
+                                    <div id="stranger-placeholder" class="video-placeholder">
+                                        <div class="placeholder-content">
+                                            <div class="user-avatar">
+                                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiByeD0iNTAiIGZpbGw9IiM2YjcyODAiLz4KPHN2ZyB4PSIyNSIgeT0iMjUiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiPgo8cGF0aCBkPSJtMjAgMTctMiwyLjI2YTIuNCwyLjQgMCAwIDEtMS44MSwyLjc0aDAgYTIuNCwyLjQgMCAwIDEtMS44MS0yLjc0TDEyIDEzTDQgMTcuMjZhMi40LDIuNCAwIDAgMS0xLjgxLDIuNzRoMCBhMi40LDIuNCAwIDAgMS0xLjgxLTIuNzRMMiAxNyIvPgo8Y2lyY2xlIGN4PSIxMiIgY3k9IjciIHI9IjQiLz4KPC9zdmc+Cjwvc3ZnPgo=" alt="User Avatar">
+                                            </div>
+                                            <div class="user-name">John from Sydney</div>
+                                            <div class="connection-status connected">Connected</div>
+                                        </div>
+                                    </div>
+                                    <video id="stranger-video" class="video-element" style="display: none;"></video>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Me Screen (Right) -->
+                        <div class="video-screen">
+                            <div class="video-wrapper">
+                                <div class="stars-bg-small">
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                    <div class="star"></div>
+                                </div>
+                                <div class="screen-label">Me</div>
+                                <div id="local-video-area" class="video-area">
+                                    <div id="local-placeholder" class="video-placeholder">
+                                        <div class="placeholder-content">
+                                            <div class="user-avatar">
+                                                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgdmlld0JveD0iMCAwIDEwMCAxMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiByeD0iNTAiIGZpbGw9IiNmYmJmMjQiLz4KPHN2ZyB4PSIyNSIgeT0iMjUiIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjIiPgo8cGF0aCBkPSJtMjAgMTctMiwyLjI2YTIuNCwyLjQgMCAwIDEtMS44MSwyLjc0aDAgYTIuNCwyLjQgMCAwIDEtMS44MS0yLjc0TDEyIDEzTDQgMTcuMjZhMi40LDIuNCAwIDAgMS0xLjgxLDIuNzRoMCBhMi40LDIuNCAwIDAgMS0xLjgxLTIuNzRMMiAxNyIvPgo8Y2lyY2xlIGN4PSIxMiIgY3k9IjciIHI9IjQiLz4KPC9zdmc+Cjwvc3ZnPgo=" alt="User Avatar">
+                                            </div>
+                                            <div class="user-name">Olivia</div>
+                                        </div>
+                                    </div>
+                                    <video id="local-video" class="video-element" autoplay muted playsinline style="display: none;"></video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Control Buttons -->
+                    <div class="control-buttons">
+                        <button id="connect-btn" class="control-btn">Connect</button>
+                        <button id="audio-btn" class="control-btn">Audio</button>
+                        <button id="video-btn" class="control-btn">Video</button>
+                        <button id="end-chat-btn" class="control-btn">End Chat</button>
+                    </div>
+                </div>
+
+                <!-- Chat Sidebar -->
+                <div class="chat-sidebar">
+                    <div class="chat-header">
+                        <h3>Chat</h3>
+                        <button id="chat-toggle" class="chat-toggle">Hide</button>
+                    </div>
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="system-message">Welcome to AussieTV! Say hello to start chatting.</div>
+                        <div class="system-message">Requesting camera and microphone...</div>
+                        <div class="system-message">System camera issue: No camera or microphone found. Retry! You can still use text chat!</div>
+                    </div>
+                    <div class="chat-input-area">
+                        <input type="text" id="chat-input" placeholder="Type a message...">
+                        <button id="send-message-btn" class="send-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Page -->
+        <div id="about-page" class="page">
+            <div class="content-container">
+                <h1>About AussieTV</h1>
+                <p>AussieTV is a random video chat platform that connects people from around the world. Our mission is to create a safe and fun environment for global conversations.</p>
+                <h2>Our Features</h2>
+                <ul>
+                    <li>Random video connections with people worldwide</li>
+                    <li>Safe and moderated environment</li>
+                    <li>Text chat alongside video</li>
+                    <li>Easy-to-use controls</li>
+                    <li>Mobile and desktop friendly</li>
+                    <li>No registration required</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Safety Page -->
+        <div id="safety-page" class="page">
+            <div class="content-container">
+                <h1>Safety Tips</h1>
+                <h2>Stay Safe While Video Chatting</h2>
+                <ul>
+                    <li>Never share personal information like your full name, address, or phone number</li>
+                    <li>Report inappropriate behavior immediately</li>
+                    <li>Use the skip function if you feel uncomfortable</li>
+                    <li>Remember that conversations are not recorded, but screenshots are possible</li>
+                    <li>Be respectful to other users</li>
+                    <li>If you're under 18, make sure you have parental permission</li>
+                </ul>
+                <h2>Community Guidelines</h2>
+                <ul>
+                    <li>No nudity or sexually explicit content</li>
+                    <li>No harassment or bullying</li>
+                    <li>No spam or commercial content</li>
+                    <li>Respect others' privacy</li>
+                    <li>Use appropriate language</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Contact Page -->
+        <div id="contact-page" class="page">
+            <div class="content-container">
+                <h1>Contact Us</h1>
+                <p>Have questions or need support? We're here to help!</p>
+
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p><strong>Email:</strong> support@aussietv.com</p>
+                    <p><strong>Response Time:</strong> Within 24 hours</p>
+
+                    <h2>Report Issues</h2>
+                    <p>If you encounter inappropriate behavior or technical issues, please report them to us immediately.</p>
+
+                    <h2>Business Inquiries</h2>
+                    <p><strong>Email:</strong> business@aussietv.com</p>
+
+                    <h2>Technical Support</h2>
+                    <p>For camera, microphone, or connection issues:</p>
+                    <ul>
+                        <li>Ensure your browser supports WebRTC</li>
+                        <li>Check your camera and microphone permissions</li>
+                        <li>Use the latest version of Chrome, Firefox, or Safari</li>
+                        <li>Check your internet connection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h3>AussieTV</h3>
+                <p>Connecting people worldwide</p>
+            </div>
+            <div class="footer-links">
+                <button class="footer-link" data-page="privacy">Privacy Policy</button>
+                <button class="footer-link" data-page="terms">Terms of Service</button>
+                <button class="footer-link" data-page="contact">Contact</button>
+                <button class="footer-link" data-page="safety">Safety Tips</button>
+            </div>
+            <div class="footer-copyright">
+                <p>2025 @ Triangle Company - All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Load JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
